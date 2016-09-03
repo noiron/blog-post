@@ -1,0 +1,1111 @@
+---
+layout: post
+title: HTML+CSS基础课笔记
+date: 2015-01-22
+tags: [html, css]
+---
+
+# HTML+CSS基础课笔记
+
+本文档是我学习慕课网（imooc）的HTML+CSS基础课程的笔记  [课程地址](http://www.imooc.com/learn/9)
+
+# 1. Html介绍
+
+## 1.2 Html和CSS的关系
+
+学习web前端开发基础技术需要掌握：HTML，CSS，JavaScript语言。
+
+1. **HTML是网页内容的载体。**内容就是网页制作者放在页面上想要让用户浏览的信息。
+
+2. **CSS样式是表现。**比如，标题字体、颜色变化，或为标题加入背景图片、边框等。所有这些用来改变内容外观的东西成为表现。
+
+3. **JavaScript是用来实现网页上的特效效果。**可以这么理解，有动画的，有交互的一般都是用JavaScript来实现的。
+
+
+## 1.3 认识html标签
+
+可以这么说，网页中每一个内容在浏览器中的显示，都要存放到各种标签中。
+
+<!-- more -->
+
+## 1.4 标签的语法
+
+1. **标签**由英文尖括号<>括起来，如<html\>就是一个标签。
+
+2. html中的标签一般都是成对出现的，分**开始标签**和**结束标签**。结束标签比开始标签多了一个/
+
+3. 标签与标签之间是可以嵌套的。
+
+4. HTML标签不区分大小写，但建议小写，因为大部分程序员都以小写为准。
+
+
+## 1.5 认识html文件基本结构
+
+一个HTML文件是有自己固定的结构的。
+
+    <html>
+        <head>...</head>
+        <body>...</body>
+    </html>
+
+1. &lt;html>&lt;/html>称为根标签，所有的网页标签都在&lt;html>&lt/html>中。
+
+2. <head\>标签用于定义文档的头部，它是所有头部元素的容器。
+
+3. 在&lt;body>和&lt;/body>标签之间的内容是网页的主要内容，如&lt;h1>、&lt;p>、&lt;a>、&lt;img>等网页内容标签，在这里的标签中的内容会在浏览器中显示出来。
+
+
+## 1.6 认识head标签
+
+文档的头部描述了文档的各种属性和信息，包括文档的标题等。绝大多数文档头部包含的数据都不会真正作为内容显示给读者。
+
+下面这些标签可用在head部分：
+
+    <head>
+        <tite>...</title>
+        <meta>
+        <link>
+        <style>...</style>
+        <script>...</script>
+    </head>
+
+&lt;title> 标签：在&lt;title> 和 &lt;/title> 标签之间的文字内容是网页的标题信息，他会出现在浏览器的标题栏中。
+
+
+## 1.7 了解HTML的代码注释
+
+注释语法：
+
+    <!--注释文字-->
+
+
+
+# 2. 认识标签（第一部分）
+
+## 2.1 语义化，让你的网页更好的被搜索引擎理解
+
+学习html标签的过程中，主要注意两个方面的学习：标签的用途、标签在浏览器中的默认样式。
+
+**标签的用途**：什么是**语义化**，通俗地说：明白每个标签的用途（在什么情况下我可以使用这个标签才合理）。
+
+语义化的好处：
+
+1. 更容易被搜索引擎收录。
+
+2. 更容易让屏幕阅读器读出网页内容。
+
+
+## 2.2 <body>标签，网页上显示的内容放在这里
+
+在网页上要展示出来的页面内容一定要放在body标签中。
+
+
+## 2.3 开始学习&lt;p>标签，添加段落
+
+语法：
+
+    <p>段落文本</p>
+
+注意一段文字一个&lt;p>标签，如有三个段落，要把三个段落分别放到3个&lt;p>标签中。
+
+&lt;p>标签默认在段前段后都会有空白，可以用css样式来删除或改变它。
+
+
+## 2.4 了解&lt;hx>标签，为你的网页添加标题
+
+标题标签一共有6个，h1、h2、h3、h4、h5、h6分别为一级标题、二级标题……六级标题，并且依据重要性递减。&lt;h1>是最高的等级。
+
+语法：
+
+    <hx>标题文本</hx> (x为1-6)
+
+文章的标题及网页上的各个**栏目的标题**都可以使用标题标签。
+
+注意：因为 h1 标签在网页中比较重要，所以一般 h1 标签被用在网站名称上。
+
+**h1-h6标签的默认样式：
+
+标签代码：
+    
+    <body>
+        <h1>一级标题</h1>
+        <h2>二级标题</h2>
+        <h3>三级标题</h3>
+        <h4>四级标题</h4>
+        <h5>五级标题</h5>
+        <h6>六级标题</h6>
+    </body>
+
+在浏览器中显示的样式为：
+![](http://img.mukewang.com/528970f4000143a405960399.jpg)
+
+<body>
+    <h1>一级标题</h1>
+    <h2>二级标题</h2>
+    <h3>三级标题</h3>
+    <h4>四级标题</h4>
+    <h5>五级标题</h5>
+    <h6>六级标题</h6>
+</body>
+
+
+## 2.5 加入强调语气，使用&lt;strong>和&lt;em>标签
+
+要在一段话中特别强调某几个文字，这时候就可以用到&lt;em>或&lt;strong>标签。
+
+两者在强调的语气上有区别：&lt;em>表示强调，&lt;strong>表示更强烈的强调。
+
+在浏览器中&lt;em>默认用<em>斜体</em>表示，&lt;strong>用<strong>粗体</strong>表示。
+
+语法：
+
+    <em>需要强调的文本</em>
+    <strong>需要强调的文本</strong>
+
+
+## 2.6 使用&lt;span>标签为文字设置单独样式
+
+&lt;span>标签是没有语义的，它的作用就是为了设置单独的样式。
+
+语法：
+
+    <span>文本</span>
+
+
+## 2.7 &lt;q>标签，短文本引用
+
+用&lt;q>标签在html中加一段引用。它的默认样式是**双引号**，其语义为：引用别人的话。
+
+语法：
+
+    <q>引用文本</q>
+
+
+## 2.8 &lt;blockquote>标签，长文本引用
+
+&lt;blockquote>的作用也是引用别人的文本，但它是对**长文本**的引用。
+
+语法：
+
+    <blockquote>引用文本</blockquote>
+
+如下例子：
+
+    <blockquote>明月出天山，苍茫云海间。长风几万里，吹度玉门关。汉下白登道，胡窥青海湾。由来征战地，不见有人还。 戍客望边色，思归多苦颜。高楼当此夜，叹息未应闲。</blockquote>
+
+浏览器对&lt;blockquote>标签的解析是缩进样式。
+
+![](http://img.mukewang.com/528c50ea000146a205520264.jpg)
+
+
+## 2.9 使用&lt;br>标签分行显示文本
+
+在需要加回车换行的地方加入&lt;br/>，它的作用相当于word文档中的回车。
+
+语法：
+
+    xhtml1.0写法：
+    <br/>
+
+    html4.01写法：
+    <br>
+
+**注意**：现在一般使用xhtml1.0版本的写法，这种版本比较规范。
+
+&lt;br/>是一个空标签，没有HTML内容的标签就是空标签，空标签只需要写一个开始标签，这样的标签有&lt;br/>、&lt;hr/>和&lt;img/>。
+
+在html中是忽略**回车**和**空格**的，输入再多空格和回车也是显示不出来的。
+
+
+## 2.10 为你的网页中添加一些空格
+
+要想在html中输入空格，必须写入
+
+    &nbsp;
+
+
+## 2.11 认识&lt;hr>标签，添加水平横线
+
+在信息展示是，有时会需要加一些用于分隔的横线，这样会使文章看起来整齐些。
+
+![](http://img.mukewang.com/52932bbc0001c12206620372.jpg)
+
+语法：
+
+html4.01版本  &lt;hr>
+
+xhtml1.0版本  &lt;hr />
+
+注意，现在一般使用 xhtml1.0 的版本（其它标签也是），这种版本比较规范。
+
+
+## 2.12 &lt;address>标签，为网页加入地址信息
+
+一般网页中会有一些地址信息需要在网页中展示出来，这些地址信息如公司的地址就可以&lt;address>标签。
+
+语法：
+
+    <address>地址信息</address>
+
+在浏览器上显示的样式为斜体，可使用css样式来修改。
+
+
+## 2.13 想加入一行代码吗？使用&lt;code>标签
+
+当代码为一行时，就可以使用&lt;code>标签了。
+
+    <code>var i = i + 300;</code>
+
+<code>var i = i + 300;</code>
+
+如果是多行代码，可以使用&lt;pre>标签。
+
+
+## 2.14 使用&lt;pre>标签为你的网页加入大段代码
+
+语法：
+
+    <pre>语言代码段</pre>
+
+被包围在pre元素中的文本通常会保留空格和换行符。
+
+如下代码：
+
+    <pre>
+        var message="欢迎";
+        for(var i=1;i<=10;i++)
+        {
+            alert(message);
+        }
+    </pre>
+
+&lt;pre> 标签不只是为显示计算机的源代码时用的，在你需要在网页中预显示格式时都可以使用它，只是&lt;pre>标签的一个常见应用就是用来展示计算机的源代码。
+
+
+# 第3章 认识标签（第二部分）
+
+## 3.1 使用ul，添加新闻信息列表
+
+在浏览网页时，你会发现网页上有很多信息的列表，如新闻列表、图片列表。
+
+这些列表可使用ul-li标签来完成。ul-li是**没有前后顺序**的信息列表。
+
+语法：
+
+    <ul>
+        <li>信息</li>
+        <li>信息</li>
+        ......
+    </ul>
+
+举例：
+
+    <ul>
+      <li>精彩少年</li>
+      <li>美丽突然出现</li>
+      <li>触动心灵的旋律</li>
+    </ul>    
+
+ul-li在网页中显示的默认样式一般为：每项li前都自带一个圆点。
+
+<ul>
+  <li>精彩少年</li>
+  <li>美丽突然出现</li>
+  <li>触动心灵的旋律</li>
+</ul>
+
+
+## 3.2 使用ol，添加图书销售排行榜
+
+想在网页中展示有前后顺序的信息列表，可使用&lt;ol>标签来制作**有序列表来展示。
+
+语法：
+
+    <ol>
+        <li>信息</li>
+        <li>信息</li>
+        ......
+    </ol>
+
+举例：
+
+    <ol>
+        <li>前端开发面试心法 </li>
+        <li>零基础学习html</li>
+        <li>JavaScript全攻略</li>
+    </ol>
+
+&lt;ol>在网页中显示的默认样式一般为：每项&lt;li>前都自带一个序号，序号默认从1开始。
+
+<ol>
+    <li>前端开发面试心法 </li>
+    <li>零基础学习html</li>
+    <li>JavaScript全攻略</li>
+</ol>
+
+
+## 3.3 认识div在排版中的作用
+
+在网页制作过程中，可以把一些独立的逻辑部分划分出来，放在一个&lt;div>标签中，这个&lt;div>标签的作用就相当于一个容器。
+
+语法：
+
+    <div>...</div>
+
+确定逻辑部分：
+
+什么是逻辑部分？它是页面上相互关联的一组元素。如网页中的独立的**栏目板块**，就是一个典型的逻辑部分。如下图，用红框框出的部分就是一个逻辑部分。
+
+![](http://img.mukewang.com/52d38c41000163e210120455.jpg)
+
+
+## 3.4 给div命名，使逻辑更加清晰
+
+为了使逻辑更加清晰，可以为用&lt;div>标签划分出的独立逻辑部分设置一个名称，用id属性来为&lt;div>提供唯一的名称。
+
+语法：
+
+    <div id="板块名称">...</div>
+
+
+## 3.5 table标签——认识网页上的表格
+
+创建表格的四个元素：table、tbody、tr、th、td
+
+1. &lt;table>...&lt;/table>：整个表格以&lt;table>标记开始、&lt;/table>标记结束
+
+2. &lt;tbody>...&lt;/tbody>：当表格内容非常多时，表格会下载一点显示一点，但如果加上&lt;tbody>标签后，这个表格就会等所有内容下载完后才显示。
+
+3. &lt;tr>...&lt;/tr>：表格的一行，有几对tr表格就有几行。
+
+4. &lt;td>...&lt;/td>：表格的一个单元格，一行中包含几对td，说明一行中有几列。
+
+5. &lt;th>...&lt;/th>：表格的头部的一个单元格，表格表头。
+
+6. 表格中列的个数，取决于一行中数据单元格的个数。
+
+![](http://img.mukewang.com/52d38f83000160be02920445.jpg)
+
+<table>
+  <tr>
+    <th>产品名称</th>
+    <th>品牌</th>
+    <th>库存量（个）</th>
+    <th>入库时间</th>
+  </tr>
+  <tr>
+    <td>耳机</td>
+    <td>联想</td>
+    <td>500</td>
+    <td>2013-1-2</td>
+  </tr>
+  <tr>
+    <td>U盘</td>
+    <td>金士顿</td>
+    <td>120</td>
+    <td>2013-8-10</td>
+  </tr>
+  <tr>
+    <td>U盘</td>
+    <td>爱国者</td>
+    <td>133</td>
+    <td>2013-3-25</td>
+  </tr>
+</table>
+
+
+## 3.6 用css样式，为表格加入边框
+
+Table表格再没有添加css样式之前，是没有边框的。
+
+下面的代码用css样式代码，为th、td单元格添加粗细为一个像素的黑色边框。
+
+    <style type="text/css">
+    table tr td, th {border:1px solid #000;}
+    <style>
+
+<style type="text/css">
+table tr td,th{border:1px solid #000;}
+</style>
+
+<table summary="">
+  <tr>
+    <th>班级</th>
+    <th>学生数</th>
+    <th>平均成绩</th>
+  </tr>
+  <tr>
+    <td>一班</td>
+    <td>30</td>
+    <td>89</td>
+  </tr>
+  <tr>
+    <td>二班</td>
+    <td>35</td>
+    <td>85</td>
+  </tr>
+  <tr>
+    <td>三班</td>
+    <td>32</td>
+    <td>80</td>
+  </tr>
+</table>
+
+
+## 3.7 caption标签，为表格添加标题和摘要
+
+![](http://img.mukewang.com/52d3a1610001a42606940398.jpg)
+
+<table summary="这个表格描述怡安街小学三年级数学平均成绩表，1到3班，3个班级的数学平均成绩。"
+
+  <caption>怡安街小学三年级数学平均成绩表</caption>
+  <tr>
+    <th>班级</th>
+    <th>学生数</th>
+    <th>平均成绩</th>
+  </tr>
+  <tr>
+    <td>一班</td>
+    <td>30</td>
+    <td>89</td>
+  </tr>
+  <tr>
+    <td>二班</td>
+    <td>35</td>
+    <td>85</td>
+  </tr>
+  <tr>
+    <td>三班</td>
+    <td>32</td>
+    <td>80</td>
+  </tr>
+</table>
+
+### 摘要
+
+摘要的内容是不会在浏览器中显示出来的。它的作用是增加表格的可读性（语义化），使搜索引擎更好的读懂表格内容。
+
+    <table summary="表格简介文本">
+
+### 标题
+
+用以描述表格内容，位置：表格上方。
+
+    <table>
+      <caption>标题文本</caption>
+      <tr>
+          <td>...</td>
+          <td>...</td>
+          ...
+      <tr>
+    </table>
+
+
+
+# 第4章 认识标签（第三部分）
+
+## 4.1 使用&lt;a>标签，链接到别一个页面
+
+使用&lt;a>标签可实现超链接。
+
+语法：
+
+    <a href="目标网址" title="鼠标哦滑过显示的文本">链接显示的文本</a>
+
+例如：
+
+    <a href="http://www.imooc.com" title="点击进入慕课网">click here!</a>
+
+<a href="http://www.imooc.com" title="点击进入慕课网">click here!</a>
+    
+
+## 4.2 在新建浏览器窗口中打开链接
+
+&lt;a>标签在默认情况下，链接的网页在当前浏览器窗口中打开，有时需要在新窗口中打开。
+
+    <a href="目标网址" target="_blank">click here!</a>
+
+<a href="目标网址" target="_blank">click here!</a>
+
+
+## 4.3 使用mailto在网页中链接Email地址
+
+&lt;a>标签还有个作用是可以链接Email地址，使用mailto能让访问者便捷向网站管理者发送电子邮件。
+
+![](http://img.mukewang.com/52da4f2a000150b714280550.jpg)
+
+    <a href="mailto:yy@imooc.com ? cc=xiaoming@imooc.com & bcc=xiaoyu@imooc.com & subject=主题 & body=邮件内容">发送</a>
+
+**注意**：如果mailto后面同时有多个参数的话，第一个参数必须以“?”开通，后面的参数都以“&”分隔。
+
+<a href="mailto:yy@imooc.com ? cc=xiaoming@imooc.com & bcc=xiaoyu@imooc.com & subject=主题 & body=邮件内容">发送</a>
+
+
+## 4.4 认识&lt;img>标签，为网页插入图片
+
+语法：
+
+    <img src="图片地址" alt="下载失败时的替换文本" title="提示文本">
+
+举例：
+
+    <img src = "myimage.gif" alt = "My Image" title = "My Image" />
+
+1. src:标识图像的位置
+
+2. alt:当图像不可见时（下载不成功时），可看到该属性指定的文本
+
+3. title:提供在图像可见时对图像的描述（鼠标滑过图片时显示的文本）
+
+4. 图像可以是GIF、PNG、JPEG格式
+
+
+
+# 第5章 与浏览者交互，表单标签
+
+## 5.1 使用表单标签，与用户交互
+
+网站使用HTML表单（form）与用户进行交互。
+
+**表单**是可以把浏览者输入的数据传送到服务器端，这样服务器端程序就可以处理表单传过来的数据。
+
+语法：
+
+    <form method="传送方式" action="服务器文件"></form>
+
+讲解：
+
+1. &lt;form>标签成对出现
+
+2. action:浏览者输入的数据被传送到的地方，比如一个PHP页面（save.php）
+
+3. method:数据传送的方式（get/post）
+
+    <pre>
+        
+        <form method="post"  action="save.php">
+            <label for="username">用户名：</label>
+            <input type="text" name="username" />
+            <label for="pass">密码：</label>
+            <input type="password" name="pass" />
+        </form>
+    
+    </pre>
+
+所有表单控件都必须放在&lt;form>&lt;/form>
+
+
+## 5.2 文本输入框、密码输入框
+
+用户要在表单中键入字母、数字等内容时，就会用到**文本输入框**。文本框也可以转化为密码输入框。
+
+语法：
+
+    <form>
+        <input type="text/password" name="名称" value="文本" />
+    </form>
+
+1. type     type="text"-->文本输入框    type="password"-->密码输入框
+
+2. name：为文本框命名，以备后台程序ASP、PHP使用
+
+3. value：设置默认值
+
+举例：
+
+    <form>
+        姓名：
+        <input type="text" name="myName"
+        <br/>
+        密码：
+        <input type="password" name="pass">
+    </form>
+
+显示为：
+
+<form>
+    姓名：
+    <input type="text" name="myName"
+    <br/>
+    密码：
+    <input type="password" name="pass">
+</form>
+
+
+## 5.3 文本域，支持多行文本输入
+
+当用户需要在表单中输入大段文字时，需要用到文本输入域。
+
+语法：
+
+    <textarea rows="行数" cols="列数">文本</textarea>
+
+1. &lt;textarea>标签成对出现
+
+2. 在标签之间可以输入默认值
+
+举例：
+
+    <form method="post" action="save.php">
+            <label>联系我们</label>
+            <textarea cols="50" rows="10">
+            在这里输入内容...</textarea>
+    </form>
+
+<form method="post" action="save.php">
+        <label>联系我们</label>
+        <textarea cols="50" rows="10">
+在这里输入内容...</textarea>
+</form>
+
+
+## 5.4 使用单选框、复选框，让用户选择
+
+语法：
+
+    <input type="radio/checkbox" value="值" 
+    name="名称" checked="checked"/>
+
+1. type：type="radio"-->单选框    type="checkbox"-->复选框
+
+2. value：提交数据到服务器的值（后台程序PHP使用）
+
+3. name：为控件命名，以备后台程序ASP、PHP使用
+
+4. checked：当设置checked="checked"时，该选项被默认选中
+
+![](http://img.mukewang.com/52e5f7c60001a23f07360267.jpg)
+
+<form name="iForm" method="post" action="save.php">
+    你是否喜欢旅游？<br />
+    <input type="radio" name="radiolove" value="喜欢" checked="checked"> 喜欢
+    <input type="radio" name="radiolove" value="不喜欢"> 不喜欢
+    <input type="radio" name="radiolove" value="无所谓"> 无所谓
+    <br /><br />
+    你对哪些运动感兴趣？<br />
+    <input type="checkbox" name="checkbox1" value="跑步"> 跑步
+    <input type="checkbox" name="checkbox2" value="打球" checked="checked"> 跑步
+    <input type="checkbox" name="checkbox3" value="登山" checked="checked"> 登山
+    <input type="checkbox" name="checkbox2" value="健身"> 健身
+</form>
+
+同一组的单选按钮，name 取值一定要一致，比如上面例子为同一个名称“radioLove”，这样同一组的单选按钮才可以起到单选的作用。
+
+
+## 5.5 使用下拉列表框，节省空间
+
+![](http://img.mukewang.com/52e604590001ae4005270185.jpg)
+
+<form name="iForm">
+    <label>爱好</label>
+    <select>
+        <option value='读书'>读书</option>
+        <option value='运动'>运动</option>
+        <option value='音乐'>音乐</option>
+        <option value='旅游'>旅游</option>
+        <option value='购物' selected="selected">购物</option>
+    </select>
+</form>
+
+讲解：
+- value:
+![](http://img.mukewang.com/52e6037300015a9905030165.jpg)
+
+- 设置selected="selected"属性，则该选项被默认选中
+
+
+## 5.6 使用下拉列表框进行多选
+
+下拉列表也可以进行多选操作，在&lt;select>标签中设置multiple="multiple"属性，就可以实现多选功能，Windows下按下Ctrl进行多选。
+
+![](http://img.mukewang.com/52e60c020001b7f805000178.jpg)
+
+<form name="iForm">
+    <label>爱好：</label>
+    <select multiple="multiple">
+        <option value="看书">看书</option>
+        <option value="旅游">旅游</option>
+        <option value="运动">运动</option>
+        <option value="购物">购物</option>
+    </select>
+</form>
+
+
+## 5.7 使用提交按钮，提交数据
+
+在表单中有两种按钮可以使用，分别为：提交按钮、重置。
+
+当用户需要提交表单信息到服务器时，需要用到**提交按钮**。
+
+语法：
+
+    <input type="submit" value="提交">
+
+举例：
+
+![](http://img.mukewang.com/52e618680001a6b204570101.jpg)
+
+<form method="post" action="save.php">
+    <label for="myName">姓名：</label>
+    <input type="text" value=" " name="myName " />
+    <input type="submit" value="提交" name="submitBtn" />
+</form>
+
+
+## 5.8 使用重置按钮，重置表单信息
+
+当用户需要重置表单信息到初始时的状态时，可以使用重置按钮使输入框恢复到初始状态。
+
+语法：
+
+    <input type="reset" value="重置">
+
+![](http://img.mukewang.com/52e618680001a6b204570101.jpg)
+
+<form method="post" action="save.php">
+    <label for="myName">姓名：</label>
+    <input type="text" value=" " name="myName " />
+    <input type="reset" value="重置" name="submitBtn" />
+</form>
+
+
+## 5.9 form表单中label标签
+
+label标签不会向用户呈现任何特殊效果，它的作用是为鼠标用户改进了可用性。当用户单击选中该label标签时，浏览器就会自动将焦点转到和标签相关的表单控件上。
+
+语法：
+
+    <label for="控件id名称">
+
+注意：标签的**for属性中的值**应当与相关控件的**id属性值**相同。
+
+例子：
+
+    <form>
+        <label for="male">男</label>
+        <input type="radio" name="sex" id="male" />
+        <br />
+        <label for="female">女</label>
+        <input type="radio" name="sex" id="female" />
+        <label for="email">输入你的邮箱地址</label>
+        <input type="email" id="mail" placeholder="Enter email">
+    </form>
+
+<form>
+    <label for="male">男</label>
+    <input type="radio" name="sex" id="male" />
+    <br />
+    <label for="female">女</label>
+    <input type="radio" name="sex" id="female" />
+    <label for="email">输入你的邮箱地址</label>
+    <input type="email" id="email" placeholder="Enter email">
+</form>
+
+
+# 第6章 开始学习CSS，为网站添加样式
+
+## 6.1 认识CSS样式
+
+CSS全称为“层叠样式表（Cascading Style Sheets）”，它主要是用于定义HTML内容在浏览器内的显示样式，如文字大小、颜色、字体加粗等。
+
+如：
+
+    p{
+        font-size:12px;
+        color:red;
+        font-weight:bold;
+    }
+
+使用CSS样式的一个好处是通过定义一个样式，让网页不同位置的文字有着统一的字体、字号或者颜色等。
+
+
+## 6.2 CSS样式的优势
+
+可以将三个分开的三个短语的文本颜色设置为红色，而且只需要编写一条css样式语句。
+
+第一步：把这三个短语用&lt;span>&lt;/span>括起来
+
+第二步：写入下列代码
+
+    span{
+        color:red;
+    }
+
+
+## 6.3 CSS代码语法
+
+css样式由**选择符**和**声明**组成，而**声明**又由**属性**和**值**组成，如下所示：
+
+![](http://img.mukewang.com/52fde5c30001b0fe03030117.jpg)
+
+选择符：又称选择器，指明网页中要应用样式规则的元素。
+
+当有多条声明时，中间可以用“;”分隔
+
+    p{font-size:12px;color:red;}
+
+
+## 6.4 CSS注释代码
+
+CSS中的注释语句用/\*注释语句\*/来标明（HTML中使用`<!--注释语句-->`)
+
+
+
+# 第7章 CSS样式基本知识
+
+## 7.1 内联式css样式，直接写在现有的HTML标签中
+
+CSS样式可以写在哪些地方呢？从CSS样式代码插入的形式来看基本可以分为以下3种：内联式、嵌入式和外部式三种。
+
+**内联式**
+
+css样式表就是把css代码直接写在现有的HTML标签中，如下代码：
+
+    <p style="color:red">这里文字是红色。</p>
+
+注意要写在元素的开始标签里。并且css样式代码要写在style=""双引号中。
+
+
+## 7.2 嵌入式css样式，写在当前的文件中
+
+嵌入式css样式，就是可以把css样式代码写在`<style type="text/css"></style>`标签之间。
+
+    <style type="text/css">
+    span{
+    color:red;
+    }
+    </style>
+
+
+## 7.3 外部式css样式，写在单独的一个文件中
+
+外部式css样式(也可称为外联式)就是把css代码写一个单独的外部文件中，这个css样式文件以“.css”为扩展名，在`<head>`内（不是在`<style>`标签内）使用`<link>`标签将css样式文件链接到HTML文件内，如下面代码：
+
+    <link href="bass.css" rel="stylesheet" type="text/css" />
+
+注意：
+
+1. rel="stylesheet" type="text/css"是固定写法不可修改
+
+2. `<link>`标签位置一般写在`<head>`标签之内
+
+
+## 7.4 三种方法的优先级
+
+三种样式有优先级：内联式>嵌入式>外部式
+
+嵌入式>外部式有一个前提：嵌入式css样式的位置一定在外部式的后面。
+
+总结为：就近原则。
+
+
+
+# 第8章 CSS选择器
+
+## 8.1 什么是选择器
+
+每一条css样式声明（定义）由两部分组成，形式如下：
+
+    选择器{
+        样式;
+    }
+
+在{}之前的部分就是“选择器”，“选择器”指明了{}中的“样式”的作用对象，也就是“样式”作用于网页中的哪些元素。如下面的“body”就是选择器。
+
+    body{
+        font-size:12px;
+        color:red;  
+    }
+
+
+## 8.2 标签选择器
+
+标签选择器其实就是html代码中的标签。如`<html>、<body>、<h1><p>、<img>`。
+
+    p{font-size:12px;line-height:1.6em;}
+
+上面的css样式代码的作用：为p标签设置12px字号，行间距设置1.6em的样式。
+
+
+## 8.3 类选择器
+
+类选择器在css样式编码中是最常用到的。
+
+语法：
+    
+    .类选择器名称{css样式代码;}
+
+使用方法：
+
+第一步：使用合适的标签把要修饰的内容标记起来
+
+    <span>胆小如鼠</span>
+
+第二步：使用class="类选择器名称"为标签设置一个类
+
+    <span class="stress">胆小如鼠</span>
+
+第三步：设置类选择器css样式
+
+    .stress{color:red;} /*类前面要加入一个英文圆点*/
+
+
+## 8.4 ID选择器
+
+在很多方面，ID选择器都类似于类选择符，但也有一些重要的区别：
+
+1. 为标签设置id="ID名称"，而不是class="类名称"。
+
+2. ID选择符的前面是井号（#）号，而不是英文圆点（.）。
+
+<pre>
+    #stress{
+        color:red;
+    }
+
+    <span id="stress">胆小如鼠</span>
+</pre>
+
+## 8.5 类和ID选择器的区别
+
+相同点：可以应用于任何元素
+
+不同点：
+
+1. **ID选择器只能在文档中使用一次**。而类选择器可以使用多次。
+
+2. **可以使用类选择器词列表方法为一个元素同时设置多个样式**。
+
+可以为一个元素同时设多个样式，但只可以用类选择器的方法实现，ID选择器是不可以的（不能使用 ID 词列表）
+
+    .stress{
+        color:red;
+    }
+    .bigsize{
+        font-size:25px;
+    }
+    <p>到了<span class="stress bigsize">三年级</span>下学期时，我们班上了一节公开课...</p>
+
+
+## 8.6 子选择器
+
+还有一个比较有用的选择器**子选择器**，即大于符号(>),用于选择指定标签元素的**第一代子元素*。
+
+    .food>li{border:1px solid red;}
+
+    <ul class="food">
+        <li>水果
+            <ul>
+                <li>香蕉</li>
+                <li>苹果</li>
+                <li>梨</li>
+            </ul>
+        </li>
+        <li>蔬菜
+            <ul>
+                <li>白菜</li>
+                <li>油菜</li>
+                <li>卷心菜</li>
+            </ul>
+        </li>
+    </ul>
+
+这行代码会使class名为food下的子元素li（水果、蔬菜）加入红色实线边框。
+
+
+## 8.7 包含（后代）选择器
+
+**包含选择器**，即加入空格，用于选择指定标签元素下的后辈元素。
+
+    .first span{color:red;}
+
+请注意这个选择器与子选择器的区别，子选择器（child selector）仅是指它的**直接后代**，或者你可以理解为作用于子元素的第一代后代。而后代选择器是作用于**所有子后代元素**。后代选择器通过空格来进行选择，而子选择器是通过“>”进行选择。
+
+
+## 8.8 通用选择器
+
+通用选择器是功能最强大的选择器，它使用一个（*）号指定，它的作用是匹配html中所有标签元素，如下使用下面代码使用html中任意标签元素字体颜色全部设置为红色：
+
+    * {color:red;}
+
+
+## 8.9 伪类选择符
+
+为什么叫做伪类选择符，它允许给html不存在的标签（标签的某种状态）设置样式，比如说我们给html中一个标签元素的鼠标滑过的状态来设置字体颜色：
+
+    a:hover{color:red;}
+
+上面一行代码就是为a标签鼠标滑过的状态设置字体颜色变红。
+
+
+## 8.10 分组选择符
+
+当你想为html中多个标签元素设置同一个样式时，可以使用分组选择符（，），如下代码为h1、span标签同时设置字体颜色为红色：
+
+    h1, span{color:red;}
+
+相当于下面两行代码：
+
+    h1{color:red;}
+    span{color:red;}
+
+
+# 第9章 CSS的继承、层叠和特殊性
+
+## 9.1 继承
+
+CSS的某些样式是具有继承性的。继承是一种规则，它允许样式不仅应用于某个特定html标签元素，而且应用于其后代。比如下面代码：如某种颜色应用于p标签，这个颜色设置不仅应用p标签，还应用于p标签中的所有子元素文本，这里子元素为span标签。
+
+    p{color:red;}
+    
+    <p>三年级时，我还是一个<span>胆小如鼠</span>的小女孩。</p>
+
+
+## 9.2 特殊性
+
+有时我们为同一个元素设置了不同的CSS样式代码，浏览器是根据权值来判断使用哪种css样式的，权值高的就使用哪种css样式。
+
+下面是权值的规则：
+
+标签的权值为1，类选择符的权值为10，ID选择符的权值最高为100。
+
+    p{color:red;}       /* 权值为1 */
+    p span{color:green;}    /* 权值为1+1=2 */
+    .warning{color:white;}  /* 权值为10 */
+    p span.warning{color:purple;}       /* 权值为1+1+10=12 */
+    #footer .note p{color:yellow;}      /* 权值为100+10+1=111 */
+
+注意：还有一个权值比较特殊--继承也有权值但很低，有的文献提出它只有0.1，所以可以理解为继承的权值最低。
+
+
+## 9.3 层叠
+
+**层叠**就是在html文件中对于同一个元素可以有多个css样式存在，当有相同权重的样式存在时，会根据这些css样式的前后顺序来决定，处于最后面的css样式会被应用。
+
+如下代码：
+
+    p{color:red;}
+    p{color:green;}
+    <p class="first">三年级时，我还是一个<span>胆小如鼠</span>的小女孩。</p>
+
+最后p中的文本会设置为green。后面的样式会覆盖前面的样式。
+
+所以前面的css样式优先级为：
+
+内联样式表（标签内部）> 嵌入样式表（当前文件中）> 外部样式表（外部文件中）。
+
+
+## 9.4 重要性
+
+在特殊情况下可以使用!important为某些样式设置具有最高权值。
+
+    p{color:red!important;}
+    p{color:green;}
+    <p class="first">三年级时，我还是一个<span>胆小如鼠</span>的小女孩。</p>
+
+这时 p 段落中的文本会显示的red红色。
+
+注意：!important要写在分号的前面
+
+注意当网页制作者不设置css样式时，浏览器会按照自己的一套样式来显示网页。并且用户也可以在浏览器中设置自己习惯的样式，比如有的用户习惯把字号设置为大一些。这时注意样式优先级为：**浏览器默认的样式 < 网页制作者样式 < 用户自己设置的样式**，但记住!important优先级样式是个例外，权值高于用户自己设置的样式。
+
